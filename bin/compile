@@ -23,13 +23,13 @@ export PATH="$PATH:$PWD"
 cd $CURRDIR
 
 wget -P /tmp https://github.com/magneto261290/megatools-heroku-buildpack/raw/master/megatools-1.11.0-git-20200503-linux-x86_64.tar.gz
-tar xvf /tmp/megatools-1.11.0-git-20200501-linux-x86_64.tar.gz --strip-components=1 --one-top-level=$BUILD_DIR/vendor/megatools-1.11.0-20200501
+tar xvf /tmp/megatools-1.11.0-git-20200503-linux-x86_64.tar.gz --strip-components=1 --one-top-level=$BUILD_DIR/vendor/megatools-1.11.0-20200503
 
-cd $BUILD_DIR/vendor/megatools-1.11.0-20200501
+cd $BUILD_DIR/vendor/megatools-1.11.0-20200503
 MEGATOOLSPATH=$PWD
 export PATH="$PATH:$PWD"
 cd $CURRDIR
 
 mkdir -p $BUILD_DIR/.profile.d
 PROFILE_PATH="$BUILD_DIR/.profile.d/megatools.sh"
-echo "export PATH=\$PATH:/app/vendor/megatools-1.11.0-20200501" >> $PROFILE_PATH
+echo "export PATH=\$PATH:/app/vendor/megatools-1.11.0-20200503" >> $PROFILE_PATH
